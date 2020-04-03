@@ -1,7 +1,8 @@
 complete <- function(directory, id = 1:332) {
-  path <- paste(getwd(), "/", directory, "/", sep = "")
+  #path <- paste(getwd(), "/", directory, "/", sep = "")
+  directory <- paste(getwd(),"/","specdata","/",sep="")
   
-  files <- list.files(path)
+  files <- list.files(directory)
   #print(files)
   
   # Create new Data Frame
@@ -10,7 +11,7 @@ complete <- function(directory, id = 1:332) {
 
   for (i in id) {
     #Read the file
-    file_dir <- paste(path, files[i], sep = "")
+    file_dir <- paste(directory, files[i], sep = "")
     file_data <- read.csv(file_dir)
     
     #Find all the records that have NOT NULL 'sulfate' AND 'nitrate' values
