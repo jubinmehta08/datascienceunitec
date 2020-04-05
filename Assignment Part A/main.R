@@ -4,6 +4,7 @@ source("pollutantmean.R")
 source("complete.R")
 source("corr.R")
 source("pollutantvector.R")
+source("calculator.R")
 
 
 output_1 <- pollutantmean("specdata", "sulfate", 1:10)
